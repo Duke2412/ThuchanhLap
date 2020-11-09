@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành vòng lặp 2</title>
+</head>
+<body>
+<input type="button" value="tam giác 1" onclick="tamgiac1()">
+<input type="button" value="tam giác 2" onclick="tamgiac2()">
+<input type="button" value="hình chữ nhật" onclick="hinhcn()">
+<script>
+    function tamgiac1() {
+    for(i=1;i<=5;i++) {
+        for (j = 1; j <=i; j++) {
+            document.write("*");
+        }document.write('<br>');
+    }
+
+    document.write('<br>');
+
+        for(i=5;i>=1;i--) {
+        for (j = 1; j <=i; j++) {
+            document.write("*");
+        }document.write('<br>');
+    }
+    }
+    function tamgiac2() {
+        for (i = 5; i >= 1; i--) {
+            for (j = 1; j <= (i - 1); j++) {
+                document.write('&ensp;');
+            }
+            for (j = 5; j >= i; j--) {
+                document.write('#');
+            }
+                document.write('<br>');
+        }
+        document.write('<br>');
+        for (i = 1; i <= 5; i++) {
+            for (j = 1; j <= (i - 1); j++) {
+                document.write('&ensp;');
+            }
+            for (j = 5; j >= i; j--) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    }
+
+    function hinhcn() {
+        for (i = 1; i <= 7; i++) {
+            for (j = 1; j <= 21; j++) {
+                if (i == 1 || j == 1 || i == 7 || j == 21) {
+                    document.write('*');
+                }else document.write('&ensp;');
+            }
+            document.write('<br>');
+        }
+    }
+
+</script>
+</body>
+</html>
